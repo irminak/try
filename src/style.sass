@@ -1,0 +1,115 @@
+$font-stack: 'Public Sans', sans-serif
+$secondary-color: #333
+$main-color: #DD5118
+$additional-color: #678422
+
+@mixin box-shadow($shadow) 
+  -webkit-box-shadow: $shadow
+  -moz-box-shadow: $shadow
+  box-shadow: $shadow
+
+    
+.wrapper
+    max-width: 1270px
+    margin: 0 auto
+    padding: 0
+    font-family: $font-stack
+
+// NAVIGATION
+
+.navbar
+    position: fixed
+    height: 80px
+    background-color: white
+    display: flex
+    
+// HEADER 
+header
+    position: relative
+    margin: 0 20px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    grid-column-gap: 0px
+    grid-row-gap: 0px
+    justify-items: center
+    align-items: center
+h1
+    font-size: 8rem
+h2
+    font-size: 4rem
+h3
+    font-size: 1rem
+.first 
+    grid-area: 1 / 1 / 2 / 2
+.second
+    grid-area: 1 / 3 / 2 / 4
+    span
+        color: $main-color
+.third 
+    grid-area: 2 / 1 / 3 / 2
+    div
+        text-align: center
+        margin-top: 20%
+.fourth 
+    grid-area: 2 / 3 / 3 / 4
+.fifth 
+    height: 80%
+    grid-area: 1 / 2 / 3 / 3
+.fourth, .third
+    margin-top: -15%
+    align-self: start
+    padding: 0 10%
+    text-align: justify
+    line-height: 2rem
+button
+    overflow: hidden
+    position: relative
+    cursor: pointer
+    padding: 16px 40px
+    text-transform: uppercase
+    color: white
+    background-color:  $main-color
+    border: none
+    border-radius: 30px
+    font-size: 12px
+    transition: .2s transform ease-in-out
+    will-change: transform
+    z-index: 0
+    @include box-shadow(0px 12px 16px 0px rgba(0, 0, 0, 0.3))
+    &::after
+        background-color: $additional-color
+        border-radius: 30px
+        content: ''
+        display: block
+        height: 100%
+        width: 100%
+        position: absolute
+        left: 0
+        top: 0
+        transform: translate(-100%, 0) rotate(10deg)
+        transform-origin: top left
+        transition: .2s transform ease-in-out
+        will-change: transform
+        z-index: -1 
+    &:hover::after
+        transform: translate(0, 0)
+    &:hover
+        transform: scale(1.05)
+        will-change: transform
+        color: white
+  
+.avo, .tomato, .basil
+    position: absolute        
+        
+.avo
+    top: 8%
+    left: -11%
+    width: 15%
+    transform: rotate(45deg)
+
+.tomato
+    bottom: 0
+    right: -12%
+    width: 15%
+   
