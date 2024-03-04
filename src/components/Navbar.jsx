@@ -1,25 +1,39 @@
+import { IoCartOutline } from 'react-icons/io5';
+
 const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='logo'>
-                <img
-                    src=''
-                    alt=''
-                />
+                <p>
+                    <span>Try</span>.
+                </p>
             </div>
             <div className='navigation'>
                 <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>Offer</li>
-                        <li>Recipes</li>
-                        <li>Mobile App</li>
-                        <li>Contact</li>
+                        <li>
+                            <a>Home</a>
+                        </li>
+                        <li>
+                            <a>Offer</a>
+                        </li>
+                        <li>
+                            <a>Recipes</a>
+                        </li>
+                        <li>
+                            <a>Mobile App</a>
+                        </li>
+                        <li>
+                            <a>Contact</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
             <div className='cart'>
-                <a></a>
+                <a>
+                    <IoCartOutline size={24} />
+                    <p>(0)</p>
+                </a>
             </div>
         </div>
     );

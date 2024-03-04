@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   max-width: 1270px;
   margin: 0 auto;
@@ -6,15 +12,63 @@
 }
 
 .navbar {
+  overflow: hidden;
   position: fixed;
-  height: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 100px;
+  height: 70px;
   background-color: white;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  z-index: 10;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+}
+.navbar .logo p {
+  font-size: 50px;
+  font-weight: 600;
+}
+.navbar .logo p span {
+  color: #DD5118;
+}
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+}
+.navbar nav ul li {
+  color: black;
+  cursor: pointer;
+  padding: 10px 10px;
+  margin: 0 10px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+.navbar nav ul li:hover {
+  color: #777;
+}
+.navbar .cart a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+.navbar .cart a p {
+  font-size: 12px;
+  padding-left: 4px;
+}
+.navbar .cart:hover {
+  color: #DD5118;
 }
 
 header {
   position: relative;
-  margin: 0 20px;
+  margin-top: 70px;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -117,19 +171,132 @@ button:hover {
 
 .avo, .tomato, .basil {
   position: absolute;
+  z-index: -1;
 }
 
 .avo {
-  top: 8%;
+  top: 75px;
   left: -11%;
-  width: 15%;
+  width: 180px;
   transform: rotate(45deg);
 }
 
 .tomato {
   bottom: 0;
   right: -12%;
-  width: 15%;
+  width: 180px;
+}
+
+section {
+  margin: 10px;
+  text-align: center;
+}
+section h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 50px;
+}
+section .plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+section .plans .meal_card {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 30px;
+  min-height: 600px;
+  min-width: 360px;
+  width: 30%;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+}
+section .plans .meal_card:nth-of-type(1) .card_header {
+  background-color: rgba(103, 132, 34, 0.3764705882);
+}
+section .plans .meal_card:nth-of-type(2) .card_header {
+  background-color: rgba(103, 132, 34, 0.6392156863);
+}
+section .plans .meal_card .card_header {
+  position: relative;
+  background-color: #678422;
+  -webkit-box-shadow: inset 0px -10px 10px -5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px -10px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px -10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+section .plans .meal_card .card_header h5 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 40px 0 20px;
+  color: white;
+}
+section .plans .meal_card .card_header p {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  color: white;
+}
+section .plans .meal_card .card_price {
+  position: absolute;
+  bottom: -50px;
+  left: calc(50% - 50px);
+  margin: 0 auto;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+}
+section .plans .meal_card .card_price p {
+  font-size: 2rem;
+  line-height: 100px;
+  font-weight: 900;
+  color: #333;
+}
+section .plans .meal_card .card_description {
+  margin-top: 70px;
+  padding: 0 60px;
+  text-align: justify;
+}
+section .plans .meal_card .card_description p {
+  font-size: 12px;
+  line-height: 1.5em;
+  color: #777;
+}
+section .plans .meal_card .card_duration {
+  margin: 20px 0 30px;
+  padding: 0 100px;
+  line-height: 40px;
+  font-size: 1rem;
+}
+section .plans .meal_card .card_duration p {
+  color: #DD5118;
+  border-bottom: 2px solid;
+}
+section .plans .meal_card .card_includes {
+  padding: 0 60px 0 70px;
+  text-align: justify;
+  flex-grow: 1;
+}
+section .plans .meal_card .card_includes ul {
+  list-style: none;
+  color: #777;
+  font-size: 12px;
+}
+section .plans .meal_card .card_includes ul li {
+  padding-bottom: 20px;
+  display: flex;
+}
+section .plans .meal_card .card_includes ul p {
+  padding-left: 10px;
+}
+section .plans .meal_card button {
+  margin: 20px 0 30px;
 }
 
 /*# sourceMappingURL=index.css.map */

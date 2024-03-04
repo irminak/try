@@ -2,31 +2,83 @@ $font-stack: 'Public Sans', sans-serif
 $secondary-color: #333
 $main-color: #DD5118
 $additional-color: #678422
+$additional-color-light: #678422a3
+$additional-color-lighter: #67842260
+$gray-color: #777
+
 
 @mixin box-shadow($shadow) 
   -webkit-box-shadow: $shadow
   -moz-box-shadow: $shadow
   box-shadow: $shadow
 
-    
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
 .wrapper
     max-width: 1270px
     margin: 0 auto
-    padding: 0
+    padding: 0 
     font-family: $font-stack
 
 // NAVIGATION
 
 .navbar
+    overflow: hidden
     position: fixed
-    height: 80px
+    left: 0
+    top: 0
+    width: 100%
+    padding: 0 100px
+    height: 70px
     background-color: white
     display: flex
+    align-items: center
+    justify-content: space-between
+    overflow: hidden
+    z-index: 10
+    @include box-shadow(0px 4px 16px 0px rgba(0, 0, 0, 0.3))
+    .logo
+        p
+            font-size: 50px
+            font-weight: 600
+            span
+                color: $main-color
+    nav
+        ul
+            display: flex
+            list-style: none 
+            li
+                color: black
+                cursor: pointer
+                padding: 10px 10px
+                margin: 0 10px
+                font-size: 12px
+                transition: 0.3s
+                &:hover
+                    color: $gray-color
+    .cart
+        a
+            cursor: pointer
+            display: flex
+            align-items: center
+            transition: 0.3s
+            p
+                font-size: 12px
+                padding-left: 4px
+        &:hover
+            color: $main-color
+                    
+
+    
     
 // HEADER 
 header
     position: relative
-    margin: 0 20px
+    // overflow: hidden
+    margin-top: 70px
+    padding: 0 20px
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(2, 1fr)
@@ -100,16 +152,106 @@ button
         color: white
   
 .avo, .tomato, .basil
-    position: absolute        
+    position: absolute   
+    z-index: -1     
         
 .avo
-    top: 8%
+    top: 75px
     left: -11%
-    width: 15%
+    width: 180px
     transform: rotate(45deg)
 
 .tomato
     bottom: 0
     right: -12%
-    width: 15%
-   
+    width: 180px
+
+// OFFER
+
+
+section
+    margin: 10px
+    text-align: center
+    h4
+        font-size: 2rem
+        text-transform: uppercase
+        padding-bottom: 50px 
+    .plans
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        .meal_card
+            display: flex
+            overflow: hidden
+            flex-direction: column
+            justify-content: start
+            border-radius: 30px
+            min-height: 600px
+            min-width: 360px
+            width: 30%
+            @include box-shadow(0px 4px 16px 0px rgba(0, 0, 0, 0.3))
+            &:nth-of-type(1) .card_header
+                background-color: $additional-color-lighter
+            &:nth-of-type(2) .card_header
+                background-color: $additional-color-light
+            .card_header
+                position: relative
+                background-color: $additional-color
+                @include box-shadow(inset 0px -10px 10px -5px rgba(0, 0, 0, 0.2))
+                h5
+                    font-size: 2rem
+                    text-transform: uppercase
+                    margin: 40px 0 20px
+                    color: white
+                p
+                    font-size: 10px
+                    text-transform: uppercase
+                    margin-bottom: 70px
+                    color: white
+            .card_price
+                position: absolute
+                bottom: -50px
+                left: calc(50% - 50px)
+                margin: 0 auto
+                border-radius: 100%
+                width: 100px
+                height: 100px
+                background-color: white
+                @include box-shadow(0px 4px 10px 0px rgba(0, 0, 0, 0.3))
+                p
+                    font-size: 2rem
+                    line-height: 100px
+                    font-weight: 900 
+                    color: #333
+            .card_description
+                margin-top: 70px
+                padding: 0 60px
+                text-align: justify
+                p
+                    font-size: 12px
+                    line-height: 1.5em
+                    color: $gray-color
+            .card_duration
+                margin: 20px 0 30px
+                padding: 0 100px
+                line-height: 40px
+                font-size: 1rem
+                p
+                    color: $main-color
+                    border-bottom: 2px solid
+            .card_includes
+                padding: 0 60px 0 70px
+                text-align: justify
+                flex-grow: 1 
+                ul
+                    list-style: none
+                    color: $gray-color
+                    font-size: 12px
+                    li
+                        padding-bottom: 20px
+                        display: flex
+                    p
+                        padding-left: 10px
+            button
+                 margin: 20px 0 30px
+                
