@@ -1,4 +1,4 @@
-import Button from './Button';
+import Button from './UI/Button';
 
 import header from '../assets/header.png';
 import avo from '../assets/avo.png';
@@ -33,7 +33,10 @@ const Header = () => {
                     Programs.
                 </h3>
                 <div>
-                    <Button text='View Meal Plans' />
+                    <Button
+                        className='text'
+                        text='View Meal Plans'
+                    />
                 </div>
             </div>
             <h3 className='fourth'>

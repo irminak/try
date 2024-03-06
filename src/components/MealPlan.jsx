@@ -2,9 +2,16 @@
 // eslint-disable-next-line react/prop-types
 
 import { FaCheck } from 'react-icons/fa6';
-import Button from './Button';
+import Button from './UI/Button';
+import { useContext } from 'react';
+import CartContext from '../store/CartContext';
 
 const MealPlan = ({ name, price, description, duration, inculdes }) => {
+    const cartCtx = useContext(CartContext);
+
+    const handleAddPlanToCart = () => {
+        cartCtx.addItem(name);
+    };
     return (
         <div className='meal_card'>
             <div className='card_header'>
@@ -33,7 +40,11 @@ const MealPlan = ({ name, price, description, duration, inculdes }) => {
                 </ul>
             </div>
             <div>
-                <Button text='Add to Cart' />
+                <Button
+                    onClick={handleAddPlanToCart}
+                    className='text'
+                    text='Add to Cart'
+                />
             </div>
         </div>
     );

@@ -1,6 +1,13 @@
+import { useContext } from 'react';
 import { IoCartOutline } from 'react-icons/io5';
+import CartContext from '../store/CartContext';
 
 const Navbar = () => {
+    const cartCtx = useContext(CartContext);
+
+    const totalCartItems = cartCtx.items.reduce((totalNumberOfItems, item) => {
+        return totalNumberOfItems + item.quantity;
+    }, 0);
     return (
         <div className='navbar'>
             <div className='logo'>
@@ -29,12 +36,10 @@ const Navbar = () => {
                     </ul>
                 </nav>
             </div>
-            <div className='cart'>
-                <a>
-                    <IoCartOutline size={24} />
-                    <p>(0)</p>
-                </a>
-            </div>
+            <button className='cart'>
+                <IoCartOutline size={24} />
+                <p>({totalCartItems})</p>
+            </button>
         </div>
     );
 };
