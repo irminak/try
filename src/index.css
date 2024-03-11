@@ -196,6 +196,49 @@ button.text:hover {
   width: 180px;
 }
 
+dialog.cart {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  min-height: 400px;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(107, 107, 107, 0.253);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(107, 107, 107, 0.253);
+  box-shadow: 0px 5px 10px 0px rgba(107, 107, 107, 0.253);
+  background-color: #f5f5f5;
+  font-family: "Public Sans", sans-serif;
+  padding: 20px;
+}
+dialog.cart h2 {
+  font-size: 20px;
+  border-bottom: 2px #ddd solid;
+  padding-bottom: 10px;
+}
+dialog.cart ul {
+  list-style: none;
+}
+dialog.cart ul .cart-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px 0 10px;
+}
+dialog.cart ul .badge {
+  display: flex;
+  align-items: center;
+  background-color: #bbf0bc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+dialog.cart ul .badge p {
+  color: #1a7e1c;
+}
+
 section {
   margin: 50px 10px;
   text-align: center;

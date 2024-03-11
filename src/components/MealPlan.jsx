@@ -6,11 +6,11 @@ import Button from './UI/Button';
 import { useContext } from 'react';
 import CartContext from '../store/CartContext';
 
-const MealPlan = ({ name, price, description, duration, inculdes }) => {
+const MealPlan = ({ name, price, description, duration, inculdes, item }) => {
     const cartCtx = useContext(CartContext);
 
     const handleAddPlanToCart = () => {
-        cartCtx.addItem(name);
+        cartCtx.addItem(item);
     };
     return (
         <div className='meal_card'>

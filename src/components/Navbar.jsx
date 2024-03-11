@@ -1,13 +1,19 @@
 import { useContext } from 'react';
 import { IoCartOutline } from 'react-icons/io5';
 import CartContext from '../store/CartContext';
+import UserProgressContext from '../store/UserProgressContext';
 
 const Navbar = () => {
     const cartCtx = useContext(CartContext);
+    const userProgressCtx = useContext(UserProgressContext);
 
     const totalCartItems = cartCtx.items.reduce((totalNumberOfItems, item) => {
         return totalNumberOfItems + item.quantity;
     }, 0);
+
+    function handleShowCart() {
+        userProgressCtx.showCart();
+    }
     return (
         <div className='navbar'>
             <div className='logo'>
@@ -36,7 +42,10 @@ const Navbar = () => {
                     </ul>
                 </nav>
             </div>
-            <button className='cart'>
+            <button
+                className='cart'
+                onClick={handleShowCart}
+            >
                 <IoCartOutline size={24} />
                 <p>({totalCartItems})</p>
             </button>

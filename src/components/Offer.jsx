@@ -15,6 +15,7 @@ const Offer = () => {
                             description={plan.description}
                             duration={plan.duration}
                             inculdes={plan.includes}
+                            item={plan}
                         />
                     );
                 })}
