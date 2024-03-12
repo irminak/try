@@ -1,7 +1,16 @@
 /* eslint-disable react/prop-types */
 import { GoDotFill } from 'react-icons/go';
+import { IoTimeOutline } from 'react-icons/io5';
+import { FaTrashAlt } from 'react-icons/fa';
 
-const CartItem = ({ name, quantity, price }) => {
+const CartItem = ({
+    name,
+    quantity,
+    price,
+    onIncrease,
+    onDecrease,
+    onRemove,
+}) => {
     return (
         <li className='cart-item'>
             <div className='cart-title'>
@@ -16,12 +25,22 @@ const CartItem = ({ name, quantity, price }) => {
                 <p>available</p>
             </div>
             <div className='cart-time'>
+                <IoTimeOutline size={20} />
                 <p>in your mailbox in just 15 minutes</p>
             </div>
             <p className='cart-item-actions'>
-                <button>-</button>
-                <button>{quantity}</button>
-                <button>+</button>
+                <div
+                    className='left-side'
+                    onClick={onRemove}
+                >
+                    <FaTrashAlt size={12} />
+                    <p>Remove</p>
+                </div>
+                <div className='right-side'>
+                    <button onClick={onDecrease}>-</button>
+                    <button>{quantity}</button>
+                    <button onClick={onIncrease}>+</button>
+                </div>
             </p>
         </li>
     );

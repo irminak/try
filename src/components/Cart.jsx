@@ -16,6 +16,11 @@ const Cart = () => {
     function handleCloseCart() {
         userProgressCtx.hideCart();
     }
+
+    function handleGoToCheckout() {
+        userProgressCtx.showCheckout();
+    }
+
     return (
         <Modal
             className='cart'
@@ -29,27 +34,52 @@ const Cart = () => {
                         name={item.name}
                         quantity={item.quantity}
                         price={item.price}
+                        onIncrease={() => cartCtx.addItem(item)}
+                        onDecrease={() => cartCtx.removeItem(item.id)}
+                        onRemove={() => cartCtx.deleteItem(item.id)}
                     />
                 ))}
             </ul>
+            <div className='cart-note'>
+                {cartCtx.items.length === 0 ? (
+                    <p>
+                        Your cart is empty. Go back and add some diet programs.
+                    </p>
+                ) : (
+                    <p>
+                        The more copies of a given program you buy, the more
+                        opportunities you will get. <br />
+                        We do not duplicate recipes.
+                    </p>
+                )}
+            </div>
             <p className='cart-total'>
                 <p>Total</p>
-                {cartTotal}
-                <p></p>
+                <p>${cartTotal}</p>
             </p>
-            <div className='cart-note'>
-                <p>
-                    The more copies of a given program you buy, the more
-                    opportunities you will get. We do not duplicate recipes.
-                </p>
+
+            <div className='modal-actions'>
+                {cartCtx.items.length === 0 ? (
+                    <Button
+                        className='text close'
+                        text='Close'
+                        onClick={handleCloseCart}
+                    />
+                ) : (
+                    <>
+                        <Button
+                            onClick={handleGoToCheckout}
+                            className='text checkout'
+                            text='Proceed to checkout'
+                        />
+                        <Button
+                            className='text shopping'
+                            text='Continue shopping'
+                            onClick={handleCloseCart}
+                        />
+                    </>
+                )}
             </div>
-            <p className='modal-actions'>
-                <Button
-                    text='Close'
-                    onClick={handleCloseCart}
-                />
-                <Button text='Go to checkout' />
-            </p>
         </Modal>
     );
 };
