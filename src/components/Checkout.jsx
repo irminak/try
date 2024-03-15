@@ -22,8 +22,8 @@ const Checkout = () => {
     function handleSubmit(e) {
         e.preventDefault();
 
-        const fd = new FormData(e.target);
-        const customerData = Object.fromEntries(fd.entries());
+        // const fd = new FormData(e.target);
+        // const customerData = Object.fromEntries(fd.entries());
     }
 
     return (

@@ -360,6 +360,135 @@ dialog.checkout .modal-checkout {
   padding-top: 40px;
 }
 
+dialog.warning {
+  width: 700px;
+  height: 500px;
+  overflow: visible;
+  padding: 30px;
+}
+dialog.warning .close {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+dialog.warning .close:hover {
+  color: #DD5118;
+}
+dialog.warning .cols {
+  display: flex;
+}
+dialog.warning .cols .col .image img {
+  position: relative;
+  top: -60px;
+  left: -50px;
+  width: 340px;
+  border-radius: 10px;
+}
+dialog.warning .cols .col .ingredients {
+  margin: -45px 40px 0 0;
+}
+dialog.warning .cols .col .ingredients h4 {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+dialog.warning .cols .col .ingredients div {
+  height: 210px;
+  overflow: scroll;
+}
+dialog.warning .cols .col .ingredients div ul li {
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: 200;
+}
+dialog.warning .cols .col .ingredients div ul li svg {
+  margin-right: 6px;
+}
+dialog.warning .cols .col .title {
+  overflow: scroll;
+  margin-left: -20px;
+}
+dialog.warning .cols .col .title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1em;
+}
+dialog.warning .cols .col .prep {
+  display: flex;
+  margin-left: -20px;
+  justify-content: space-evenly;
+}
+dialog.warning .cols .col .prep .row .img {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+}
+dialog.warning .cols .col .prep .row .img svg {
+  color: #DD5118;
+}
+dialog.warning .cols .col .prep .row .img p {
+  padding-left: 10px;
+  font-size: 13px;
+  font-weight: 400;
+}
+dialog.warning .cols .col .prep .row .img p:nth-of-type(2) {
+  font-weight: 300;
+  font-size: 12px;
+  color: #333;
+}
+dialog.warning .cols .col h4 {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+dialog.warning .cols .col .steps {
+  overflow: scroll;
+}
+dialog.warning .cols .col .steps ol {
+  padding: 8px 20px;
+}
+dialog.warning .cols .col .steps ol li {
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.about {
+  padding: 40px;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+.about .columns {
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.about .columns p {
+  flex-basis: 30%;
+  padding: 16px 0;
+  font-size: 14px;
+  line-height: 2em;
+  text-align: justify;
+  position: relative;
+}
+.about .columns p img {
+  height: 100px;
+  position: absolute;
+  right: -30px;
+  bottom: -80px;
+  transform: rotate(20deg);
+}
+.about .columns div {
+  margin-top: -30px;
+}
+.about .columns div img {
+  height: 400px;
+}
+
 section {
   margin: 50px 10px;
   text-align: center;
@@ -488,10 +617,16 @@ section .recipes .recipe_card .recipe_photo {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
 }
 section .recipes .recipe_card .recipe_photo img {
   height: 220px;
   min-width: 260px;
+}
+section .recipes .recipe_card:hover .recipe_photo {
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
 }
 section .recipes .recipe_card .recipe_icons {
   margin-top: 4px;
@@ -503,6 +638,7 @@ section .recipes .recipe_card .recipe_icons {
   height: 80px;
   padding: 48px 10px 30px;
   justify-content: space-evenly;
+  transition: 0.3s;
 }
 section .recipes .recipe_card .recipe_icons .recipe_title {
   position: absolute;
@@ -515,6 +651,8 @@ section .recipes .recipe_card .recipe_icons .recipe_title {
   -moz-box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 section .recipes .recipe_card .recipe_icons .recipe_title h4 {
   padding: 16px 10px;
@@ -536,6 +674,20 @@ section .recipes .recipe_card .recipe_icons .circle {
   height: 30px;
   width: 30px;
   border-radius: 100%;
+}
+section .recipes .recipe_card .recipe_icons .vegetarian {
+  background-color: #bbf0bc;
+}
+section .recipes .recipe_card .recipe_icons .dairy {
+  background-color: #b9d7fa;
+}
+section .recipes .recipe_card:hover .recipe_icons {
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3);
+}
+section .recipes .recipe_card:hover .recipe_title {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=index.css.map */

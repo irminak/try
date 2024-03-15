@@ -310,6 +310,128 @@ dialog.checkout
     .modal-checkout 
         padding-top: 40px
 
+// WARNING
+dialog.warning
+    width: 700px
+    height: 500px
+    overflow: visible
+    padding: 30px
+    .close
+        position: absolute
+        top: -30px
+        right: -30px
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            color: $main-color
+    .cols
+        display: flex
+        .col
+            .image
+                img
+                    position: relative
+                    top: -60px
+                    left: -50px
+                    width: 340px
+
+                    border-radius: 10px
+            .ingredients
+                margin: -45px 40px 0 0
+                h4 
+                    font-size: 20px
+                    font-weight: 500
+                    padding-bottom: 10px
+                div
+                    height: 210px
+                    overflow: scroll
+                    ul
+                        li
+                            padding: 6px 0
+                            font-size: 13px
+                            font-weight: 200
+                            svg 
+                                margin-right: 06px
+            .title
+                // max-height: 160px
+                overflow: scroll    
+                margin-left: -20px
+
+                h2 
+                    // margin-top: -20px
+                    font-size: 40px
+                    font-weight: 700
+                    line-height: 1em
+            .prep
+                display: flex
+                margin-left: -20px
+                justify-content: space-evenly
+                .row
+                    .img
+                        padding: 16px 0 
+                        display: flex
+                        align-items: center
+                        svg
+                            color: $main-color
+                        p 
+                            padding-left: 10px
+                            font-size: 13px
+                            font-weight: 400
+                            &:nth-of-type(2)
+                                font-weight: 300
+                                font-size: 12px
+                                color: $secondary-color
+            h4 
+                    font-size: 20px
+                    font-weight: 500
+                    padding-bottom: 10px
+            .steps
+                // height: 180px
+                overflow: scroll
+                ol
+                    padding: 8px 20px
+                    // text-shadow: 0 0 4px black
+                    // color: transparent
+
+
+                    li
+                        padding-bottom: 10px
+                        font-size: 13px
+                        font-weight: 200
+                        text-align: justify
+                 
+            
+                            
+
+.about
+    padding:40px
+    background-color: #ddd
+    border-radius: 20px
+    .columns
+        display: flex
+        gap: 40px
+        justify-content: space-around
+        align-items: flex-start
+        p 
+            flex-basis: 30%
+            padding: 16px 0
+            font-size: 14px
+            line-height: 2em
+            text-align: justify
+            position: relative
+            // border: solid 1px black
+            img
+                height: 100px
+                position: absolute
+                right: -30px
+                bottom: -80px
+                transform: rotate(20deg)
+        div
+            // border: solid 1px black
+            margin-top: -30px
+            img
+                height: 400px
+  
+
 
 
 // OFFER
@@ -415,10 +537,12 @@ section
                 display: flex
                 justify-content: center
                 align-items: center
-                // @include box-shadow(0px 4px 16px 0px rgba(0, 0, 0, 0.3))
+                transition: 0.3s
                 img
                     height: 220px
                     min-width: 260px
+            &:hover .recipe_photo
+                @include box-shadow(0px 4px 16px 0px rgba(0, 0, 0, 0.3))
             .recipe_icons
                 margin-top: 4px
                 position: relative
@@ -430,6 +554,7 @@ section
                 height: 80px
                 padding: 48px 10px 30px
                 justify-content: space-evenly
+                transition: 0.3s
                 .recipe_title
                     position: absolute
                     width: 240px
@@ -439,6 +564,8 @@ section
                     color: $secondary-color
                     @include box-shadow(0px 4px 7px 0px rgba(0, 0, 0, 0.3))
                     border-radius: 10px
+                    cursor: pointer
+                    transition: 0.3s
                     h4
                         padding: 16px 10px
                         font-size: 12px
@@ -453,10 +580,19 @@ section
                         margin-left: 10px
                 .circle
                     background-color: #bbb
-                    // background-color: #bbf0bc
-                    // background-color: #b9d7fa
                     height: 30px
                     width: 30px
                     border-radius: 100%
+                .vegetarian
+                    background-color: #bbf0bc
+                .dairy
+                    background-color: #b9d7fa
+            &:hover .recipe_icons
+                @include box-shadow(0px 4px 16px 0px rgba(0, 0, 0, 0.3))
+            &:hover .recipe_title
+                transform: scale(1.1)
+
+
+                        
                     
                     

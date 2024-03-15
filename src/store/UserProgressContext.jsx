@@ -7,10 +7,15 @@ const UserProgressContext = createContext({
     hideCart: () => {},
     showCheckout: () => {},
     hideCheckout: () => {},
+    showWarning: () => {},
+    hideWarning: () => {},
+    selectedRecipe: '',
+    setSelectedRecipe: () => {},
 });
 
 export function UserProgressContextProvider({ children }) {
     const [userProgress, setUserProgress] = useState('');
+    const [selectedRecipe, setSelectedRecipe] = useState(null);
 
     function showCart() {
         setUserProgress('cart');
@@ -28,12 +33,24 @@ export function UserProgressContextProvider({ children }) {
         setUserProgress('');
     }
 
+    function showWarning() {
+        setUserProgress('warning');
+    }
+
+    function hideWarning() {
+        setUserProgress('');
+    }
+
     const userProgressCtx = {
         progress: userProgress,
         showCart,
         hideCart,
         showCheckout,
         hideCheckout,
+        showWarning,
+        hideWarning,
+        selectedRecipe,
+        setSelectedRecipe,
     };
 
     return (
