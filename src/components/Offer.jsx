@@ -4,7 +4,9 @@ import { mealPlans } from '../data/mealPlans';
 const Offer = () => {
     return (
         <section>
-            <h4>Find the best fit</h4>
+            <h4>
+                find the best <span>FIT</span>
+            </h4>
             <div className='plans'>
                 {mealPlans.map((plan) => {
                     return (

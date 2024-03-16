@@ -5,7 +5,9 @@ import quality from '../assets/quality.png';
 const AboutUs = () => {
     return (
         <section className='about'>
-            <h4>Our story</h4>
+            <h4>
+                our <span>STORY</span>
+            </h4>
             <div className='columns'>
                 <p>
                     The idea for "Try" was born out of a shared passion for

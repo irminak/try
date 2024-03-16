@@ -13,13 +13,15 @@ const Modal = ({ children, open, onClose, className = '' }) => {
     }, [open]);
 
     return createPortal(
-        <dialog
-            ref={dialog}
-            className={`modal ${className}`}
-            onClose={onClose}
-        >
-            {children}
-        </dialog>,
+        <div className='modal-background'>
+            <dialog
+                ref={dialog}
+                className={`modal ${className}`}
+                onClose={onClose}
+            >
+                {children}
+            </dialog>
+        </div>,
         document.getElementById('modal')
     );
 };

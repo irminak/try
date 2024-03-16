@@ -8,7 +8,9 @@ const Recipes = () => {
 
     return (
         <section>
-            <h4>Our Recipes</h4>
+            <h4>
+                our <span>RECIPES</span>
+            </h4>
             <div className='recipes'>
                 {APICtx.recipes.map((recipe) => {
                     return (

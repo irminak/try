@@ -24,7 +24,7 @@ export function APIContextProvider({ children }) {
                 setIsFetching(true);
                 try {
                     const response = await fetch(
-                        `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=40`
+                        `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=12`
                     );
                     const resData = await response.json();
 

@@ -197,6 +197,7 @@ button.text:hover {
 }
 
 dialog.modal {
+  backdrop-filter: blur(30px);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -490,13 +491,22 @@ dialog.warning .cols .col .steps ol li {
 }
 
 section {
-  margin: 50px 10px;
+  margin: 140px 10px;
   text-align: center;
+}
+section:nth-of-type(1) {
+  margin-top: 100px;
 }
 section h4 {
   font-size: 2rem;
-  text-transform: uppercase;
   padding-bottom: 50px;
+  font-weight: 500;
+  font-size: 64px;
+  color: #333;
+}
+section h4 span {
+  text-transform: uppercase;
+  color: #DD5118;
 }
 section .plans {
   display: flex;
@@ -688,6 +698,129 @@ section .recipes .recipe_card:hover .recipe_icons {
 }
 section .recipes .recipe_card:hover .recipe_title {
   transform: scale(1.1);
+}
+section .reviews .card {
+  border-radius: 20px;
+  background-color: #eee;
+  padding: 50px;
+  margin: 0 20px;
+}
+section .reviews .card .col {
+  display: flex;
+  flex-direction: column;
+}
+section .reviews .card .col .row {
+  display: flex;
+  justify-content: flex-start;
+}
+section .reviews .card .col .row img {
+  border-radius: 100%;
+  width: 100px;
+}
+section .reviews .card .col .row .col {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+section .reviews .card .col .row .col h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+section .reviews .card .col .row .col .stars {
+  padding-top: 4px;
+  display: flex;
+  align-items: center;
+}
+section .reviews .card .col .row .col .stars .svg-yellow {
+  width: 20px;
+  color: #ffce0b;
+}
+section .reviews .card .col .row .col .stars .svg-gray {
+  width: 20px;
+  color: #777;
+}
+section .reviews .card .col .row .col .date {
+  padding-top: 4px;
+  font-weight: 300;
+}
+section .reviews .card .desc {
+  margin-top: 30px;
+  text-align: start;
+}
+section .reviews .card .desc h5 {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+section .reviews .card .desc p {
+  text-align: justify;
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 1.5em;
+}
+
+footer {
+  background-color: #678422;
+  border-radius: 70px 70px 0 0;
+  padding: 140px 100px 20px;
+  color: white;
+  font-weight: 200;
+}
+footer .cols {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+footer .cols .col {
+  width: 20%;
+}
+footer .cols .col:nth-of-type(1) {
+  width: 40%;
+}
+footer .cols .col .logo p {
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+}
+footer .cols .col .logo p span {
+  color: #DD5118;
+}
+footer .cols .col .desc {
+  padding-top: 30px;
+  width: 60%;
+}
+footer .cols .col .socials {
+  display: flex;
+  padding-top: 30px;
+  gap: 20px;
+  align-items: center;
+}
+footer .cols .col .socials .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 100%;
+  width: 26px;
+  height: 26px;
+}
+footer .cols .col .title {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+footer .cols .col ul {
+  list-style: none;
+}
+footer .cols .col ul li {
+  padding: 8px 0;
+}
+footer .copy {
+  border-top: 1px solid white;
+  padding-top: 20px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */
