@@ -761,6 +761,42 @@ section .reviews .card .desc p {
   line-height: 1.5em;
 }
 
+.mobile {
+  padding: 0 40px;
+}
+.mobile p {
+  padding: 0 20px;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 100;
+}
+.mobile .cols {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.mobile .cols .col {
+  width: 50%;
+}
+.mobile .cols .col .rasp {
+  position: absolute;
+}
+.mobile .cols .col ul {
+  list-style: none;
+  text-align: start;
+}
+.mobile .cols .col ul li {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 200;
+}
+.mobile .cols .col ul li span {
+  font-weight: 600;
+}
+.mobile .cols .col img {
+  width: 200px;
+}
+
 footer {
   background-color: #678422;
   border-radius: 70px 70px 0 0;
