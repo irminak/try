@@ -4,10 +4,15 @@ import {
     FaTwitter,
     FaLinkedinIn,
 } from 'react-icons/fa';
+// import raspberries from '../assets/raspberries.png';
 
 const Footer = () => {
     return (
         <footer>
+            {/* <img
+                className='rasp'
+                src={raspberries}
+            /> */}
             <div className='cols'>
                 <div className='col'>
                     <div className='logo'>

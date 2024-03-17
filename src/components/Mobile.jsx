@@ -1,5 +1,5 @@
 import mobile from '../assets/mobile.png';
-import raspberries from '../assets/raspberries.png';
+// import blueberries from '../assets/blueberries.jpg';
 
 const Mobile = () => {
     return (
@@ -7,6 +7,11 @@ const Mobile = () => {
             <h4>
                 download our <span>APP</span>
             </h4>
+            {/* <img
+                className='berries'
+                src={blueberries}
+                alt=''
+            /> */}
 
             <p>
                 Take a sneak peek at our mobile app! With a clean and intuitive
@@ -39,10 +44,6 @@ const Mobile = () => {
                             support from our active community of users.
                         </li>
                     </ul>
-                    <img
-                        className='rasp'
-                        src={raspberries}
-                    />
                 </div>
                 <div className='col'>
                     <img

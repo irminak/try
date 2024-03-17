@@ -6,7 +6,7 @@ import tomato from '../assets/tomato.png';
 
 const Header = () => {
     return (
-        <header>
+        <header id='home'>
             <img
                 className='avo'
                 src={avo}

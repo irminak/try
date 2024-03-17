@@ -11,6 +11,10 @@ const Recipes = () => {
             <h4>
                 our <span>RECIPES</span>
             </h4>
+            <p className='recipes-p'>
+                Try some of our recipes and unlock access to the full version to
+                enjoy delicious food every day
+            </p>
             <div className='recipes'>
                 {APICtx.recipes.map((recipe) => {
                     return (
