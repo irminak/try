@@ -45,7 +45,7 @@ const Mobile = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='col'>
+                <div className='col col_phone'>
                     <img
                         src={mobile}
                         alt=''

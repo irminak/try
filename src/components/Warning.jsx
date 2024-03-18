@@ -23,19 +23,24 @@ const Warning = () => {
 
                 const columnHeight =
                     document.querySelector('.warning').offsetHeight;
-                const availableHeight =
-                    columnHeight -
-                    titleHeight -
-                    prepHeight -
-                    stepsHeaderHeight -
-                    60;
+                let availableHeight;
+
+                if (window.innerWidth < 600) {
+                    availableHeight = 200;
+                } else {
+                    availableHeight =
+                        columnHeight -
+                        titleHeight -
+                        prepHeight -
+                        stepsHeaderHeight -
+                        60;
+                }
                 setMaxHeight(availableHeight + 'px');
             }
         };
 
         calculateMaxHeight();
 
-        // Recalculate when the window is resized
         window.addEventListener('resize', calculateMaxHeight);
 
         // Cleanup
@@ -66,7 +71,7 @@ const Warning = () => {
                         size={30}
                     />
                     <div className='cols'>
-                        <div className='col'>
+                        <div className='col recipe-title'>
                             <div className='image'>
                                 <img
                                     src={

@@ -24,7 +24,7 @@ const Reviews = () => {
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 780,
                 settings: {
                     slidesToShow: 1,
                     autoplay: true,
