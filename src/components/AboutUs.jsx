@@ -28,6 +28,7 @@ const AboutUs = () => {
                     solutions and delicious recipes to make your journey
                     enjoyable and sustainable.
                     <img
+                        className='quality'
                         src={quality}
                         alt=''
                     />

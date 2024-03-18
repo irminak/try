@@ -28,16 +28,19 @@ const Navbar = () => {
                             <a>Home</a>
                         </li>
                         <li>
+                            <a>About Us</a>
+                        </li>
+                        <li>
                             <a>Offer</a>
                         </li>
                         <li>
                             <a>Recipes</a>
                         </li>
                         <li>
-                            <a>Mobile App</a>
+                            <a>Reviews</a>
                         </li>
                         <li>
-                            <a>Contact</a>
+                            <a>Mobile App</a>
                         </li>
                     </ul>
                 </nav>
