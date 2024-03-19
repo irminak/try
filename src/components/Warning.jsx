@@ -137,9 +137,12 @@ const Warning = () => {
                                 style={{ height: maxHeight }}
                             >
                                 <ol>
-                                    {selectedRecipe.steps.map((step) => (
-                                        <li key={step.number}>{step.step}</li>
-                                    ))}
+                                    {selectedRecipe.steps &&
+                                        selectedRecipe.steps.map((step) => (
+                                            <li key={step.number}>
+                                                {step.step}
+                                            </li>
+                                        ))}
                                 </ol>
                             </div>
                         </div>
