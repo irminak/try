@@ -28,7 +28,10 @@ const Recipes = () => {
                             likes={recipe.aggregateLikes}
                             description={recipe.summary}
                             servings={recipe.servings}
-                            steps={recipe.analyzedInstructions[0].steps}
+                            steps={
+                                recipe.analyzedInstructions &&
+                                recipe.analyzedInstructions[0].steps
+                            }
                             ingredients={recipe.extendedIngredients}
                         />
                     );
