@@ -4,7 +4,10 @@ import quality from '../assets/quality.png';
 
 const AboutUs = () => {
     return (
-        <section className='about'>
+        <section
+            className='about'
+            id='about'
+        >
             <h4>
                 our <span>STORY</span>
             </h4>

@@ -7,7 +7,7 @@ const Recipes = () => {
     const APICtx = useContext(APIContext);
 
     return (
-        <section>
+        <section id='recipes'>
             <h4>
                 our <span>RECIPES</span>
             </h4>

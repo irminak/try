@@ -3,7 +3,10 @@ import mobile from '../assets/mobile.png';
 
 const Mobile = () => {
     return (
-        <section className='mobile'>
+        <section
+            className='mobile'
+            id='mobile'
+        >
             <h4>
                 download our <span>APP</span>
             </h4>

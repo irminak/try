@@ -1,5 +1,5 @@
 import Button from './UI/Button';
-
+import { Link } from 'react-scroll';
 import header from '../assets/header.png';
 import avo from '../assets/avo.png';
 import tomato from '../assets/tomato.png';
@@ -33,10 +33,18 @@ const Header = () => {
                     Programs.
                 </h3>
                 <div>
-                    <Button
-                        className='text'
-                        text='View Meal Plans'
-                    />
+                    <Link
+                        to='offer'
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                    >
+                        <Button
+                            className='text'
+                            text='View Meal Plans'
+                        />
+                    </Link>
                 </div>
             </div>
             <h3 className='fourth'>

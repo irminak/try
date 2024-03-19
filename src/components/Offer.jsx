@@ -3,7 +3,7 @@ import { mealPlans } from '../data/mealPlans';
 
 const Offer = () => {
     return (
-        <section>
+        <section id='offer'>
             <h4>
                 find the best <span>FIT</span>
             </h4>

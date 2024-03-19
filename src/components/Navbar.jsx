@@ -3,6 +3,7 @@ import { IoCartOutline } from 'react-icons/io5';
 import CartContext from '../store/CartContext';
 import { FiMenu } from 'react-icons/fi';
 import { GrClose } from 'react-icons/gr';
+import { Link } from 'react-scroll';
 
 import UserProgressContext from '../store/UserProgressContext';
 
@@ -23,30 +24,86 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='logo'>
-                <p>
-                    <span>Try</span>.
-                </p>
+                <Link
+                    to='home'
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                >
+                    <p>
+                        <span>Try</span>.
+                    </p>
+                </Link>
             </div>
             <div className='navigation'>
                 <nav className='desktop'>
                     <ul>
                         <li>
-                            <a>Home</a>
+                            <Link
+                                to='home'
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                            >
+                                Home
+                            </Link>
                         </li>
                         <li>
-                            <a>About Us</a>
+                            <Link
+                                to='about'
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                            >
+                                About Us
+                            </Link>
                         </li>
                         <li>
-                            <a>Offer</a>
+                            <Link
+                                to='offer'
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                            >
+                                Offer
+                            </Link>
                         </li>
                         <li>
-                            <a>Recipes</a>
+                            <Link
+                                to='recipes'
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                            >
+                                Recipes
+                            </Link>
                         </li>
                         <li>
-                            <a>Reviews</a>
+                            <Link
+                                to='reviews'
+                                spy={true}
+                                smooth={true}
+                                offset={-200}
+                                duration={500}
+                            >
+                                Reviews
+                            </Link>
                         </li>
                         <li>
-                            <a>Mobile App</a>
+                            <Link
+                                to='mobile'
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                            >
+                                Mobile App
+                            </Link>
                         </li>
                     </ul>
                 </nav>
@@ -69,22 +126,76 @@ const Navbar = () => {
                     <nav className={toggle ? 'mobile' : 'hidden'}>
                         <ul>
                             <li>
-                                <a>Home</a>
+                                <Link
+                                    onClick={handleClick}
+                                    to='home'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                >
+                                    Home
+                                </Link>
                             </li>
                             <li>
-                                <a>About Us</a>
+                                <Link
+                                    onClick={handleClick}
+                                    to='about'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                >
+                                    About Us
+                                </Link>
                             </li>
                             <li>
-                                <a>Offer</a>
+                                <Link
+                                    onClick={handleClick}
+                                    to='offer'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                >
+                                    Offer
+                                </Link>
                             </li>
                             <li>
-                                <a>Recipes</a>
+                                <Link
+                                    onClick={handleClick}
+                                    to='recipes'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                >
+                                    Recipes
+                                </Link>
                             </li>
                             <li>
-                                <a>Reviews</a>
+                                <Link
+                                    onClick={handleClick}
+                                    to='reviews'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-200}
+                                    duration={500}
+                                >
+                                    Reviews
+                                </Link>
                             </li>
                             <li>
-                                <a>Mobile App</a>
+                                <Link
+                                    onClick={handleClick}
+                                    to='mobile'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                >
+                                    Mobile App
+                                </Link>
                             </li>
                         </ul>
                     </nav>
